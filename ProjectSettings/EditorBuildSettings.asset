@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Comic Battle Royale/2D Character - Astronaut/Demo Colors.unity
+    guid: aa5623a5fb874425a3ed830854d4e63b
   m_configObjects: {}
