@@ -2,7 +2,7 @@ public class IdleState : ZombieState
 {
     public override void Enter(ZombieController zombie)
     {
-        zombie.PlayAnimation("Idle");
+        zombie.PlayAnimation("Idle");//if not yet spotted the player, it will be in the idle state 
     }
 
     public override void Update(ZombieController zombie)
