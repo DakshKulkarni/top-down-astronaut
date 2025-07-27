@@ -1,22 +1,23 @@
 using TMPro;
 using UnityEngine;
-
 public class KillCounterUI : MonoBehaviour
 {
     public TMP_Text killText;
     private int killCount = 0;
-
-    void OnEnable()
+    void Start()
     {
-        KillEventManager.Instance.OnKill += UpdateKillCount;
+        if (KillEventManager.Instance != null)
+        {
+            KillEventManager.Instance.OnKill += UpdateKillCount;
+        }
+        if (killText != null)
+            killText.text = "Kills: 0";
     }
-
     void OnDisable()
     {
         if (KillEventManager.Instance != null)
             KillEventManager.Instance.OnKill -= UpdateKillCount;
     }
-
     void UpdateKillCount()
     {
         killCount++;
