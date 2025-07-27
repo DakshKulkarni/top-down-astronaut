@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
         targetPos.z = 0;
         Vector3 direction = (targetPos - transform.position).normalized;
 
-        // Set velocity
+        // Set velocity in the dir of the mouse
         rb.velocity = direction * speed;
 
         // Set rotation to face the direction
