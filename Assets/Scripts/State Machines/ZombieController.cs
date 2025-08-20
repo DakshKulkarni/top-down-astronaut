@@ -1,5 +1,6 @@
 using UnityEngine;
-public class ZombieController : MonoBehaviour
+
+public class ZombieController : MonoBehaviour, IZombie
 {
     public Transform player;
     public float walkRange = 8f;
@@ -19,6 +20,11 @@ public class ZombieController : MonoBehaviour
     void Update()
     {
         currentState?.Update(this);
+    }
+
+    public void Initialize(Transform playerTransform)
+    {
+        player = playerTransform;
     }
 
     public void ChangeState(ZombieState newState)
