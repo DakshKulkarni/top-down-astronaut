@@ -4,9 +4,7 @@ using UnityEngine;
 public class KillEventManager : MonoBehaviour
 {
     public static KillEventManager Instance { get; private set; }
-
     public event Action OnKill;
-
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -18,7 +16,6 @@ public class KillEventManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
-
     public void NotifyKill()
     {
         OnKill?.Invoke();
